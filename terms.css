@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+.container-1 {
+    max-width: 900px;
+    margin: 20px auto; /* Add some margin for spacing */
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid red;
+    font-weight: 700;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #ecf0f1;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.container-1 ul {
+    list-style-type: none;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.container-1 ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.container-1 ul li::before {
+    content: '•';
+    color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container-1 {
+        padding: 20px; /* Reduce padding on smaller screens */
+        margin: 0 10px; /* Add margin for smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.3rem; /* Adjust font size for smaller screens */
+    }
+
+    p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
+
+    .container-1 ul li {
+        padding-left: 20px; /* Adjust padding for list items */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem; /* Further reduce font size for mobile */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Further reduce font size for mobile */
+    }
+
+    p {
+        font-size: 12px; /* Further adjust paragraph font size */
+    }
+
+    .container-1 {
+        padding: 15px; /* Further reduce padding */
+    }
+}

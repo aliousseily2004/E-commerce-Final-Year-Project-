@@ -1,0 +1,393 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+
+
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+
+}
+li a{
+text-decoration: none;
+color: black;
+}
+img {
+    width: 120px;
+    height: auto;
+}
+.navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.navbar ul li {
+    list-style: none;
+    margin: 0 15px;
+    cursor: pointer;
+    position: relative;
+}
+.nav {
+    display: flex;
+    align-items: center;
+
+}
+.nav li {
+    display: inline-block;
+}
+.nav li::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: red;
+    transition: width 0.5s ease, left 0.5s ease;
+    z-index: 0;
+}
+.nav li:hover {
+    color: red;
+}
+.nav li:hover::before {
+    width: 100%;
+    left: 0;
+}
+.nav-icons {
+    display: flex;
+    gap: 30px;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+
+}
+.nav-icons i:hover {
+    color: red;
+}
+.nav-icons i {
+    padding-right: 15px;
+    position: relative;
+    z-index: 11;
+    color: #2c3e50;
+    font-size: 20px;
+}
+.message {
+    position: absolute;
+    font-size: 10px;
+    background-color: black;
+    border: 1px solid black;
+    margin-top: 2px;
+    color: white;
+    padding: 5px;
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+}
+.message.show {
+    display: block;
+    opacity: 1;
+}
+.messages {
+    position: absolute;
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+    opacity: 0;
+    font-size: 18px;
+    width: 35%;
+    height: 35%;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+.messages.show {
+    display: flex;
+    opacity: 1;
+}
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+}
+.search-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+.search-overlay.active {
+    display: flex;
+}
+.search-container {
+    background-color: white;
+    width: 80%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.search-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.search-header h2 {
+    margin: 0;
+    color: #333;
+}
+.close-search {
+    cursor: pointer;
+    font-size: 24px;
+    color: #666;
+}
+.search-input-container {
+    display: flex;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.search-input {
+    flex-grow: 1;
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.search-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-button i {
+    font-size: 18px;
+}
+.navbar .nav > ul > li {
+    position: relative;
+}
+.Men-drop, .women-drop, .kid-drop ,.accessories-drop{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+.nav li.Men,
+.nav li.women,
+.nav li.kid ,
+.nav li.Accessories
+{
+    position: relative;
+
+}
+.nav li.Men::after,
+.nav li.women::after,
+.nav li.kid::after,
+.nav li.Accessories::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10px;
+    bottom: -10px;
+}
+.nav li.Men:hover .Men-drop,
+.nav li.women:hover .women-drop,
+.nav li.kid:hover .kid-drop,
+.nav li.Accessories:hover .accessories-drop
+{
+    display: block;
+}
+.Men-drop ul,
+.women-drop ul,
+.kid-drop ul,
+.accessories-drop ul
+{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.Men-drop ul li,
+.women-drop ul li,
+.kid-drop ul li,
+.accessories-drop ul li
+{
+    padding: 10px 15px;
+    color: black;
+    text-align: left;
+    white-space: nowrap;
+}
+.Men-drop ul li:hover,
+.women-drop ul li:hover,
+.kid-drop ul li:hover,
+.accessories-drop ul li:hover
+
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.Men-drop ul li::before,
+.women-drop ul li::before,
+.kid-drop ul li::before,
+.accessories-drop ul li::before
+{
+    content: none;
+}
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    padding: 10px;
+}
+@media (max-width: 1000px) {
+    ul li a{
+    font-size: 11px;
+    gap: 1%;
+   }
+   .nav-icons i{
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+   }
+   .nav-logo img{
+    width: 75px;
+    height: auto;
+   }
+
+}@media (max-width: 789px) {
+    ul.nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        width: 300px;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        z-index: 1000;
+        padding: 20px 0;
+    }
+
+    /* Make nav-links visible when the 'active' class is applied */
+    ul.nav-links.active {
+        display: flex;
+    }
+
+    ul.nav-links > li { /* Target direct children of nav-links */
+        padding: 10px 20px;
+    }
+
+    ul.nav-links > li > a:hover { /* Remove underline on hover for main links */
+        text-decoration: none;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav {
+        position: relative; /* For absolute positioning of dropdown */
+    }
+  
+
+    .Men-drop,
+    .women-drop,
+    .kid-drop,
+    .accessories-drop {
+        display: none; /* Initially hidden */
+        position: static; /* Appear within the flow of the document */
+        background-color: transparent; /* Make background transparent */
+        box-shadow: none; /* Remove shadow */
+        padding: 0;
+        margin-top: 0;
+        width: 100%; /* Take full width */
+    }
+
+    .Men-drop ul,
+    .women-drop ul,
+    .kid-drop ul,
+    .accessories-drop ul {
+        flex-direction: column;
+        padding-left: 20px; /* Indent subcategories */
+    }
+
+    .Men-drop ul li,
+    .women-drop ul li,
+    .kid-drop ul li,
+    .accessories-drop ul li {
+        padding: 5px 0; /* Adjust padding for subcategory items */
+     
+    }
+
+    .nav li.Men .Men-drop,
+    .nav li.women .women-drop,
+    .nav li.kid .kid-drop,
+    .nav li.Accessories .accessories-drop {
+        display: none; /* Still controlled by JavaScript */
+    }
+    .Men-drop ul li a:hover, /* Target subcategory links on hover */
+    .women-drop ul li a:hover,
+    .kid-drop ul li a:hover,
+    .accessories-drop ul li a:hover {
+        text-decoration: none; /* Remove underline */
+        color: inherit; /* Keep the original color if it was red due to parent hover */
+    }
+    .nav li::before {
+     
+        background: none;
+        
+    }
+}
+
+@media (max-width: 480px) {
+    ul.nav-links {
+        display: none;
+    }
+
+    .nav-logo img {
+        width: 55px;
+        height: auto;
+    }
+
+    .nav-icons i {
+        font-size: 16px;
+        padding-right: 10px;
+    }
+}

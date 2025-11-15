@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto; /* Add margin for spacing */
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid red;
+    font-weight: 700;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid #ecf0f1;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+strong {
+    color: #2c3e50;
+}
+
+.container ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.container ul li::before {
+    content: '•';
+    color: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1.5rem; /* Reduce padding on smaller screens */
+        margin: 10px; /* Add margin for smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.3rem; /* Adjust font size for smaller screens */
+    }
+
+    p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
+
+    ul {
+        margin-left: 20px; /* Adjust margin for list */
+    }
+
+    li {
+        margin-bottom: 8px; /* Adjust margin for list items */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem; /* Further reduce font size for mobile */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Further reduce font size for mobile */
+    }
+
+    p {
+        font-size: 12px; /* Further adjust paragraph font size */
+    }
+
+    .container {
+        padding: 1rem; /* Further reduce padding */
+    }
+}

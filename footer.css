@@ -1,0 +1,346 @@
+.footer {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    color: #333;
+    margin-top: 30px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid red;
+    padding-bottom: 10px;
+    color: #2c3e50;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #000;
+}
+.footer-column button:hover{
+    background-color: red;
+    
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: red;
+}
+.contact-info i{
+    cursor: pointer;
+}
+.contact-info i:hover{
+    color: red;
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+    color: #666;
+}
+
+.legal-links a {
+    color: #666;
+    text-decoration: none;
+    margin-left: 15px;
+}
+.footer-column ul li a,.legal-links a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a::after,.legal-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    bottom: -3px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.footer-column ul li a:hover::after,.legal-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+.payment-methods i{
+    cursor: pointer;
+}
+a{
+    color: red;
+    text-decoration: none;
+}
+
+
+/* Existing Footer Styles */
+.footer {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    color: #333;
+    margin-top: 30px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid red;
+    padding-bottom: 10px;
+    color: #2c3e50;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #000;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: red;
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 15px;
+    font-size: 24px;
+    color: #666;
+}
+
+.legal-links a {
+    color: #666;
+    text-decoration: none;
+    margin-left: 15px;
+}
+/* Media Queries for Responsive Footer */
+/* Media Queries for Responsive Footer */
+/* Responsive Footer CSS */
+
+/* For screens up to 1000px width (large tablets, small desktops) */
+@media (max-width: 1000px) {
+    .footer-main {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center align columns */
+    }
+
+    .footer-column {
+        margin: 15px 0; /* Add margin between columns */
+        text-align: center; /* Center text in columns */
+    }
+
+    .footer-column h4 {
+        font-size: 20px; /* Slightly reduce heading size */
+    }
+
+    .footer-column ul li {
+        margin-bottom: 10px; /* Standard margin for list items */
+    }
+    .footer-column ul li a {
+        font-size:  18px; /* Standard margin for list items */
+    }
+
+    .newsletter-form {
+        flex-direction: column; /* Stack input and button vertically */
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .newsletter-form input {
+        margin-bottom: 10px; /* Add margin below input */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Stack bottom elements vertically */
+        align-items: center; /* Center align bottom elements */
+        gap: 15px;
+    }
+
+    .payment-methods {
+        font-size: 22px; /* Adjust icon size */
+        margin-bottom: 10px; /* Add margin below payment icons */
+    }
+
+    .legal-links {
+        text-align: center; /* Center align legal links */
+    }
+
+    .legal-links a {
+        margin: 5px; /* Margin between legal links */
+    }
+}
+
+/* For screens up to 768px width (tablets and smaller) */
+@media (max-width: 768px) {
+    .footer-column h4 {
+        font-size: 18px; /* Adjust heading size */
+    }
+
+    .footer-column ul li {
+        margin-bottom: 8px; /* Reduce margin for list items */
+    }
+
+    .newsletter-form button {
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    .contact-info {
+        font-size: 14px; /* Adjust font size for contact info */
+    }
+}
+
+/* For screens up to 480px width (phones) */
+@media (max-width: 480px) {
+    .footer-column h4 {
+        font-size: 16px; /* Further reduce heading size for small screens */
+    }
+
+    .footer-column ul li {
+        margin-bottom: 5px; /* Further reduce margin for list items */
+    }
+
+    .newsletter-form button {
+        padding: 8px 15px; /* Adjust button padding */
+    }
+
+    .contact-info {
+        font-size: 13px; /* Adjust font size for contact info */
+    }
+}
