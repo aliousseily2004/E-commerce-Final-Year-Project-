@@ -1,0 +1,72 @@
+[2025-04-05 10:24:51] Session Data
+Details: Array
+(
+    [LoggedIn] => 1
+    [id] => 34
+    [email] => aliousseily262004@gmail.com
+    [error_message] => An error occurred while processing your rating. Please try again later.
+)
+
+[2025-04-05 10:24:51] POST Data
+Details: Array
+(
+    [product_id] => 1
+    [rating] => 5
+    [submit_rating] => 
+)
+
+[2025-04-05 10:24:51] User ID Not Found
+Details: Array
+(
+    [Session] => Array
+        (
+            [LoggedIn] => 1
+            [id] => 34
+            [email] => aliousseily262004@gmail.com
+            [error_message] => An error occurred while processing your rating. Please try again later.
+        )
+
+    [POST Data] => Array
+        (
+            [product_id] => 1
+            [rating] => 5
+            [submit_rating] => 
+        )
+
+)
+
+[2025-04-05 10:25:16] Session Data
+Details: Array
+(
+    [LoggedIn] => 1
+    [id] => 34
+    [email] => aliousseily262004@gmail.com
+    [error_message] => User authentication failed.
+)
+
+[2025-04-05 10:25:16] POST Data
+Details: Array
+(
+    [product_id] => 1
+    [submit_rating] => 
+)
+
+[2025-04-05 10:25:16] User ID Not Found
+Details: Array
+(
+    [Session] => Array
+        (
+            [LoggedIn] => 1
+            [id] => 34
+            [email] => aliousseily262004@gmail.com
+            [error_message] => User authentication failed.
+        )
+
+    [POST Data] => Array
+        (
+            [product_id] => 1
+            [submit_rating] => 
+        )
+
+)
+
